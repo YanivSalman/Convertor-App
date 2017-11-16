@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="vivify.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css.css" />
+    <title>Document</title>
+</head>
+
+<body class="bg-dark">
+
+    <div class="container len">
+        <div class="container mt-4 p-1 text-center bg-info rounded jjj">
+            <a class="nav-item nav-link text-white font-weight-bold " href="index.html">Home <span class="sr-only">(current)</span></a>
+            <h2 class="vivify jumpInLeft">Temperature </h2>
+            <div id="temp" class="fa">
+            </div>
+            <p class="font-italic">Type a value in the <span class="vivify blink duration-4000" style="color:white" class="font-weight-bold">F</span> field to convert the value to EveryThing</p>
+            <form class="form-inline">
+                <label class="text-white font-weight-bold mr-3 hila">Fahrenheit</label>
+                <input type="number" placeholder="..." id="test" size="3" maxlength="15" onkeypress="test(this.id, event)" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+                <button id="button" class="btn btn-sm btn-outline-dark ml-2">Reset</button>
+            </form>
+            <script>
+                function LengthConverter(valNum) {
+                    document.getElementById("outputcel").innerHTML = (valNum - 32) / 1.8;
+                    document.getElementById("outputKel").innerHTML = ((valNum - 32) / 1.8) + 273.15;
+
+
+                }
+            </script>
+            <div class=" font-weight-bold text-center display-5 yaniv vivify blink mt-3 bol">
+                <p>Celsius: <span id="outputcel"></span></p>
+                <p>Kelvin: <span id="outputKel"></span></p>
+
+
+            </div>
+
+            <img class="vivify flipInY duration-8000" src="2.jpg" width="120px" height="120" />
+            <!--maxlength-->
+            <script>
+                function test(id, event) {
+                    var element = $("#" + id);
+                    var len = element.val().length + 1;
+                    var max = element.attr("maxlength")
+                    var cond = (46 < event.which && event.which < 58) || (46 < event.keyCode && event.keyCode < 58);
+
+                    if (!(cond && len <= max)) {
+                        event.preventDefault();
+                        return false;
+                    }
+                }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script src="js.js"></script>
+
+</body>
+
+</html>

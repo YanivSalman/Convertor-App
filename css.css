@@ -1,0 +1,36 @@
+.img {
+    background-image: url('na.jpeg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#img2 {
+    top: 35%;
+    left: 37%;
+    transform: translate(-50%, 50%);
+}
+
+.yaniv {
+    font-size: 17px;
+}
+
+span {
+    color: rgba(0, 0, 0, 0.705);
+}
+
+.hila {
+    font-size: 28px;
+}
+
+.bol {
+    color: white;
+}
+
+.jjj {
+    opacity: 0.9;
+}
+
+.img1 {
+    font-size: 28px;
+}
